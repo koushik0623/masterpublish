@@ -105,11 +105,14 @@ input, select, textarea, button {
         overflow-wrap: break-word; 
     }
     .hero-title { 
-        font-size: 2rem; 
-        line-height: 1.25; 
+        font-size: clamp(1.4rem, 5.5vw, 1.85rem); 
+        line-height: 1.28; 
         word-wrap: break-word; 
         overflow-wrap: break-word; 
         margin-bottom: 1.2rem;
+        padding: 0 5px;
+        width: 100%;
+        box-sizing: border-box;
     }
     .hero-subtitle { 
         font-size: 0.95rem; 
@@ -283,9 +286,9 @@ input, select, textarea, button {
 
 /* --- SMALL MOBILE (Max 480px & 360px) --- */
 @media (max-width: 480px) {
-    .section-title { font-size: 1.85rem; }
-    .hero-title { font-size: 1.75rem; }
-    .hero-subtitle { font-size: 0.9rem; }
+    .section-title { font-size: clamp(1.4rem, 5.5vw, 1.8rem); }
+    .hero-title { font-size: clamp(1.3rem, 5.2vw, 1.65rem); }
+    .hero-subtitle { font-size: 0.88rem; }
     
     .hero-visual { height: 240px; }
     .orbital-ui-container { transform: scale(0.55) !important; margin: -30px auto 0; }
