@@ -16,9 +16,11 @@ document.addEventListener('DOMContentLoaded', () => {
                 if (scrollY > 50) header.classList.add('scrolled');
                 else header.classList.remove('scrolled');
                 
-                // Hero Parallax
-                if (heroVisual && scrollY < window.innerHeight) {
+                // Hero Parallax (Desktop Only)
+                if (heroVisual && window.innerWidth > 768 && scrollY < window.innerHeight) {
                     heroVisual.style.transform = `translateY(${scrollY * 0.3}px)`;
+                } else if (heroVisual && window.innerWidth <= 768) {
+                    heroVisual.style.transform = 'none';
                 }
 
                 // Timeline Scroll Motion
