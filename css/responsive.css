@@ -15,8 +15,8 @@
     .offset-card { margin-top: 0; }
     
     .hero-grid { grid-template-columns: 1fr; gap: 2rem; }
-    .hero-visual { height: 400px; order: -1; }
-    .hero-content { padding-right: 0; text-align: center; align-items: center; }
+    .hero-content { order: 1; padding-right: 0; text-align: center; align-items: center; }
+    .hero-visual { order: 2; height: 320px; min-height: unset; margin-top: 1rem; }
     
     .footer-grid { grid-template-columns: 1fr; text-align: center; gap: 3rem; }
     .footer-col { display: flex; flex-direction: column; align-items: center; }
@@ -53,8 +53,15 @@
 /* --- MOBILE (Max 768px) --- */
 @media (max-width: 768px) {
     /* Typography & Spacing */
+    .hero-cinematic { padding-top: 100px; padding-bottom: 2rem; min-height: auto; }
     .section-title { font-size: 2.2rem; word-wrap: break-word; overflow-wrap: break-word; }
-    .hero-title { font-size: 2.5rem; line-height: 1.2; word-wrap: break-word; overflow-wrap: break-word; }
+    .hero-title { font-size: 2.1rem; line-height: 1.25; word-wrap: break-word; overflow-wrap: break-word; }
+    .hero-subtitle { font-size: 1rem; max-width: 100%; margin-bottom: 1.8rem; }
+    .hero-cta-group { width: 100%; justify-content: center; }
+    
+    .hero-visual { height: 280px; min-height: auto; margin-top: 1.5rem; }
+    .orbital-ui-container { transform: scale(0.65) !important; margin: 0 auto; }
+    
     .editorial-section, .services-layered, .timeline-section, .interactive-domains, .indexing-ecosystem, .faq-accordion {
         padding: 4rem 0;
     }
